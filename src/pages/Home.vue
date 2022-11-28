@@ -17,8 +17,6 @@ import { useNotificacaoStore } from "../stores/notificacaoStore";
 import { usePerfilStore } from "../stores/perfilStore";
 import ListaPerfisApp from "../components/ListaPerfisApp.vue";
 import ListaNotificacoesApp from "../components/ListaNotificacoesApp.vue";
-
-
 export default {
     components: {
         ListaPerfisApp, 
