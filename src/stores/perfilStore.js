@@ -1,6 +1,6 @@
 import { defineStore } from "pinia";
 import { login } from "../api/login";
-import { cadastrar, listarUltimosPerfis } from "../api/perfil";
+import { cadastrar, listarUltimosPerfis, buscarPerfil, atualizarPerfil } from "../api/perfil";
 
 export const usePerfilStore = defineStore("perfil", {
     state: () => ({
@@ -16,6 +16,12 @@ export const usePerfilStore = defineStore("perfil", {
         },
         async listarUltimosPerfis() {
             this.ultimosPerfis = await listarUltimosPerfis()
-        }
+        },
+        async buscarPerfilLogado() {
+            return await buscarPerfil(this.usuarioLogado.perfil)
+        },
+        async atualizarPerfil(perfil) {
+            return await atualizarPerfil(perfil)
+        },
     }
 })
