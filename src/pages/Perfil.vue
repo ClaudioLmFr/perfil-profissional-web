@@ -2,7 +2,7 @@
     <h1>Meu Perfil</h1>
 
     <h2>Informações Pessois</h2>
-    <!-- {{ perfil }} -->
+    {{ perfil }}
     <section>
         <form>
             <div>
@@ -35,7 +35,14 @@
                 <tabela-escolaridade-app :educacao="perfil.educacao"></tabela-escolaridade-app>
                 </section>
             </fieldset>
-        </form>
+            <fieldset>
+                <legend>Certificações</legend>
+                <form-certificacao-app :perfil="perfil "></form-certificacao-app>
+                <section>
+                <tabela-certificacao-app :certificacoes="perfil.certificacoes"></tabela-certificacao-app>
+                </section>
+            </fieldset>
+            </form>
     </section>
 
     <div>
@@ -47,11 +54,15 @@ import { mapState, mapActions } from "pinia"
 import { usePerfilStore } from "../stores/perfilStore"
 import FormEscolaridadeApp from "../components/FormEscolaridadeApp.vue"
 import TabelaEscolaridadeApp from "../components/TabelaEscolaridadeApp.vue"
+import FormCertificacaoApp from "../components/FormCertificacaoApp.vue"
+import TabelaCertificacaoApp from "../components/TabelaCertificacaoApp.vue"
 
 export default {
     components: {
         FormEscolaridadeApp,
         TabelaEscolaridadeApp,
+        FormCertificacaoApp,
+        TabelaCertificacaoApp,
     },
     data: () => ({
         perfil: { usuario: {} },

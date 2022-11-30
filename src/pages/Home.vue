@@ -7,7 +7,7 @@
     </section>
     <section>
         <h3>Últimas notificações</h3>
-        <lista-notificacoes-app></lista-notificacoes-app>
+        <tabela-notificacoes-app></tabela-notificacoes-app>
     </section>
 </template>
 
@@ -16,11 +16,11 @@ import { mapState, mapActions } from "pinia";
 import { useNotificacaoStore } from "../stores/notificacaoStore";
 import { usePerfilStore } from "../stores/perfilStore";
 import ListaPerfisApp from "../components/ListaPerfisApp.vue";
-import ListaNotificacoesApp from "../components/ListaNotificacoesApp.vue";
+import TabelaNotificacoesApp from "../components/TabelaNotificacoesApp.vue";
 export default {
     components: {
         ListaPerfisApp, 
-        ListaNotificacoesApp,
+        TabelaNotificacoesApp,
     },
     computed: {
         ...mapState(usePerfilStore, ["usuarioLogado"]),

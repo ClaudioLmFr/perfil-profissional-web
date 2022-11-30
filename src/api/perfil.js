@@ -22,5 +22,6 @@ export function buscarPerfil(id) {
 
 export function atualizarPerfil(perfilAtualizado) {
   setToken();
+  console.log(perfil)
   return perfil.put(perfilAtualizado._id, perfilAtualizado);
 }
