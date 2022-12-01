@@ -2,7 +2,7 @@
     <h1>Meu Perfil</h1>
 
     <h2>Informações Pessois</h2>
-    {{ perfil }}
+    <!-- {{ perfil }} -->
     <section>
         <form>
             <div>

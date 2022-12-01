@@ -20,6 +20,9 @@ export const usePerfilStore = defineStore("perfil", {
         async buscarPerfilLogado() {
             return await buscarPerfil(this.usuarioLogado.perfil)
         },
+        async buscarPerfil(perfilId){
+            return await buscarPerfil(perfilId)
+        },
         async atualizarPerfil(perfil) {
             return await atualizarPerfil(perfil)
         },
