@@ -1,5 +1,5 @@
 import { defineStore } from "pinia";
-import { buscarNotificacoesPerfil } from "../api/notificacao";
+import { buscarNotificacao, buscarNotificacoesPerfil, marcarNotificaoLida } from "../api/notificacao";
 
 export const useNotificacaoStore = defineStore("notificacao", {
     state: () => ({
@@ -8,6 +8,12 @@ export const useNotificacaoStore = defineStore("notificacao", {
     actions: {
         async buscarNotificacoesPerfil(perfilId) {
             this.notificacoes = await buscarNotificacoesPerfil(perfilId)
-        }
-    }
+        },
+        async buscarNotificacao(notificacaoId) {
+            return await buscarNotificacao(notificacaoId)
+        },
+        async marcarNotificaoLida(notificaoId) {
+            return await marcarNotificaoLida(notificaoId)
+          }
+    },
 })

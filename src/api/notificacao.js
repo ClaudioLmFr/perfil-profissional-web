@@ -14,3 +14,13 @@ export function buscarNotificacoesPerfil(perfilId) {
     setToken()
     return notificacaoPerfil.get(perfilId)
 }
+
+export function buscarNotificacao(notificacaoId) {
+    setToken()
+    return notificacao.get(notificacaoId)
+}
+
+export function marcarNotificaoLida(notificaoId) {
+    setToken()
+    return notificacao.put(`/lida/${notificaoId}`)
+}
