@@ -3,7 +3,7 @@
     <h2>Olá! {{ usuarioLogado.nome }}</h2>
     <section>
         <h3>Últimos perfis cadastrados</h3>
-        <lista-perfis-app></lista-perfis-app>
+        <tabela-perfis-app></tabela-perfis-app>
     </section>
     <section>
         <h3>Últimas notificações</h3>
@@ -15,11 +15,11 @@
 import { mapState, mapActions } from "pinia";
 import { useNotificacaoStore } from "../stores/notificacaoStore";
 import { usePerfilStore } from "../stores/perfilStore";
-import ListaPerfisApp from "../components/ListaPerfisApp.vue";
+import TabelaPerfisApp from "../components/TabelaPerfisApp.vue";
 import TabelaNotificacoesApp from "../components/TabelaNotificacoesApp.vue";
 export default {
     components: {
-        ListaPerfisApp, 
+        TabelaPerfisApp, 
         TabelaNotificacoesApp,
     },
     computed: {

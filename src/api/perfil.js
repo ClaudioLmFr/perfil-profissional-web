@@ -25,3 +25,8 @@ export function atualizarPerfil(perfilAtualizado) {
   console.log(perfil)
   return perfil.put(perfilAtualizado._id, perfilAtualizado);
 }
+
+export function conectarPerfil(perfilOrigem, perfilDestino) {
+  setToken()
+  return perfil.post("/conexao",{remetente: perfilOrigem, destinatario: perfilDestino});
+}
